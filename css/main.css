@@ -1,0 +1,143 @@
+/* ==========
+Variables ========== */
+:root {
+    --black: #000;
+    --blue: #14213d;
+    --highlight: #EC5800;
+    --gray: #e5e5e5;
+    --white: #fff; 
+}
+
+
+/* ==========
+Main Styles ========== */
+
+html {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: clamp(2.6rem, -0.8750rem + 8.3333vw, 3.5rem);
+    line-height: clamp(2.5rem, -0.8750rem + 8.3333vw, 3.4rem);
+}
+
+a {
+    color: var(--blue); 
+}
+
+.container {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.flex {
+    display: flex;
+}
+
+header {
+    background-color: var(--black);
+    color: #fff;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+header .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline-flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    transition: all .2s ease-in-out;
+    display: block;
+}
+
+nav a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--highlight);
+    transition: width .3s;
+    margin: 6px auto 0;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+#cta {
+    background-color: #000;
+    color: #fff;
+    min-height: 300px;
+    max-height: 600px;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.cta-left {
+    width: 50%;
+    padding-right: 20px;
+}
+
+
+.sub-heading {
+    color: var(--highlight);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.cta-left h1 {
+    margin-bottom: 20px;
+}
+
+.cta-left p {
+    font-size: clamp(1rem, -0.8750rem + 8.3333vw, 1.4rem);
+    font-weight: 300;
+    margin: 0;
+}
+
+.cta-right {
+    width: 50%;
+}
+
+/* ==========
+Mobile Styles ========== */
+
+@media only screen and (max-width: 769px) {
+    
+    #cta .flex {
+        flex-direction: column;
+    }
+
+    .cta-left,
+    .cta-right {
+        width: 100%;
+    }
+}
