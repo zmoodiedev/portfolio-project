@@ -7,18 +7,28 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="./css/main.css"/>
 </head>
 <body>
     <header>
         <div class="container flex">
-            <div id="mainLogo">Zach Moodie</div>
+            <div id="mainLogo" class="text-gradient">Zach Moodie</div>
             <nav>
                 <ul>
                     <li><a href="#">Recent Work</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li>
+                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                        <span class="link-tip">Github</span>
+                    </li>
+                    <li>
+                        <a href="#" class="icon"><i class="fa-solid fa-file-lines"></i></a>
+                        <span class="link-tip">Resumé</span>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -27,32 +37,66 @@
         <section id="cta">
             <div class="container flex">
                 <div class="cta-left">
-                    <span class="sub-heading">Hello, my name is Zach</span>
-                    <h1>I am a Web&nbsp;Developer,<br>
+                    <span class="sub-heading">Hello, my name is Zach.</span>
+                    <h1>I am a <span class="underline">Web&nbsp;Developer</span>,<br>
                         Designer<br>
                         &amp; Freelancer</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sodales ut etiam sit amet nisl purus in mollis.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button>Reach Out</button>
                 </div>
-                <div class="cta-right"></div>
+                <div class="cta-right">
+                    <img src="/img/man.png" alt="Zach Moodie Portrait" class="portrait">
+                </div>
             </div>
         </section>
         <section id="tools">
             <div class="container flex">
-                <div class="tool-logo">Logo 1</div>
-                <div class="tool-logo">Logo 2</div>
-                <div class="tool-logo">Logo 3</div>
-                <div class="tool-logo">Logo 4</div>
-                <div class="tool-logo">Logo 5</div>
+                <div class="tool-logo"><i class="fa-brands fa-github"></i></div>
+                <div class="tool-logo"><i class="fa-brands fa-square-js"></i></div>
+                <div class="tool-logo"><i class="fa-brands fa-html5"></i></div>
+                <div class="tool-logo"><i class="fa-brands fa-sass"></i></div>
+                <div class="tool-logo"><i class="fa-brands fa-react"></i></div>
             </div>
         </section>
         <section id="projects">
-            <article class="project project-1">Project 1</article>
-            <article class="project project-2">Project 2</article>
+            <h2>Recent Projects</h2>
+            <div class="container flex">
+                <div class="projects-tease">
+                    <div id="project1">
+                        <div class="project-1-img"></div>
+                        <div class="project-1-tag">
+                            <h3>Name of Project 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="tool-logos">
+                                <i class="fa-brands fa-github"></i>
+                                <i class="fa-brands fa-html5"></i>
+                            </div>
+                            <button>View Project</button>
+                        </div>
+                    </div>
+                    <div id="project2">
+                        <div class="project-2-img"> </div>
+                        <div class="project-2-tag">
+                            <h3>Name of Project 2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="tool-logos">
+                                <i class="fa-brands fa-github"></i>
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-square-js"></i>
+                            </div>
+                            <button>View Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+    <div id="sideLink">
+        <a href="#" target="_blank">Back to top</a>
+    </div>
     <footer>
-
+        &copy; <script type="text/JavaScript">document.write(new Date().getFullYear());</script> Zachari Moodie | <a href="#">Contact</a>
     </footer>
-    <script src="./js/scripts.js"></script>"
+    <script src="./js/scripts.js"></script>
 </body>
 </html>
