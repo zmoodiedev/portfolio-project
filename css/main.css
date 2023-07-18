@@ -360,7 +360,7 @@ nav li.linkedin:hover > span.link-tip {
 }
 
 #scrollIcon img {
-    width: 50px;
+    width: 40px;
 }
 
 #projects {
@@ -536,6 +536,7 @@ ul.contact-info li i {
     font-size: .7rem;
     font-weight: 600;
     margin-bottom: 6px;
+    color: var(--black);
 }
 
 .contact-right input {
@@ -618,39 +619,52 @@ Mobile Styles ========== */
     /* ==========
     Mobile Nav ========== */
 
-    header .flex {
-        height: auto;
-    }
 
-    nav,
-    nav ul {
-        height: 0;
+
+    nav {
+        position: absolute;
+        left: -1200px;
+        top: 80px;
         flex-direction: column;
         width: 100%;
         background-color: var(--black);
-        transition: all .3s ease-in-out;
-    }
-
-    nav.active,
-    nav.active ul {
-        height: auto;
-        background-color: var(--black);
-        position: relative;
         z-index: 3;
+        transition: all .3s ease-in-out;
+        padding: 40px;
     }
 
-    nav.active ul {
+    nav.active {
+        left: 0;
+        top: 80px;
+        background-color: var(--black);
+    }
+
+    nav ul {
         width: 100%;
         flex-direction: column;
+        list-style-type: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
+    }
+
+    nav a {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
     }
 
     #hamburger {
         display: block;
     }
 
+    #backToTop {
+        display: none;
+    }
 
     #cta {
-        height: 50vh;
+        margin-bottom: 75px;
     }
 
     .cta-left,

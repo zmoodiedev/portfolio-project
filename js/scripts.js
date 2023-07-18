@@ -10,7 +10,7 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     backToTop.style.opacity = "1";
   } else {
     backToTop.style.opacity = "0";
