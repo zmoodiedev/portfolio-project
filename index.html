@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
     
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="./css/main.css"/>
@@ -16,20 +17,27 @@
 <body>
     <header>
         <div class="container flex">
-            <div id="mainLogo" class="text-gradient">Zach Moodie</div>
+            <div id="mainLogo" class="text-gradient"><a href="http://localhost:5500">Zach Moodie</a></div>
+            <div id="hamburger"><i class="fa-solid fa-bars"></i></div>
             <nav>
-                <ul>
-                    <li><a href="#">Recent Work</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li>
-                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <ul id="mainNav">
+                    <li class="home"><a href="http://localhost:5500">Home</a></li>
+                    <li class="work"><a href="http://localhost:5500/#projects">Recent Projects</a></li>
+                    <li class="contact"><a href="http://localhost:5500/contact.html">Contact</a></li>
+                    <li class="github">
+                        <a href="https://github.com/zmoodiedev" target="_blank" class="icon"><i class="fa-brands fa-github"></i></a>
                         <span class="link-tip">Github</span>
                     </li>
-                    <li>
-                        <a href="#" class="icon"><i class="fa-solid fa-file-lines"></i></a>
+                    <li class="linkedin">
+                        <a href="www.linkedin.com/in/zachmoodie" target="_blank" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <span class="link-tip">LinkedIn</span>
+                    </li>
+                    <li class="resume">
+                        <a href="#" target="_blank" class="icon"><i class="fa-solid fa-file-lines"></i></a>
                         <span class="link-tip">Resumé</span>
                     </li>
                 </ul>
+                
             </nav>
         </div>
     </header>
@@ -38,7 +46,7 @@
             <div class="container flex">
                 <div class="cta-left">
                     <span class="sub-heading">Hello, my name is Zach.</span>
-                    <h1>I am a <span class="underline">Web&nbsp;Developer</span>,<br>
+                    <h1 data-aos="fade-up">I am a <span class="underline">Web&nbsp;Developer</span>,<br>
                         Designer<br>
                         &amp; Freelancer</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -58,45 +66,42 @@
                 <div class="tool-logo"><i class="fa-brands fa-react"></i></div>
             </div>
         </section>
-        <section id="projects">
-            <h2>Recent Projects</h2>
+        <div id="scrollIcon"><img src="/img/icon_scroll.png" class="fa-bounce"></div>
+        <section id="projects">  
             <div class="container flex">
+                <h2 data-aos="zoom-in-right" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom">Recent<br>Projects</h2>
                 <div class="projects-tease">
-                    <div id="project1">
-                        <div class="project-1-img"></div>
-                        <div class="project-1-tag">
-                            <h3>Name of Project 1</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div class="tool-logos">
-                                <i class="fa-brands fa-github"></i>
-                                <i class="fa-brands fa-html5"></i>
-                            </div>
-                            <button>View Project</button>
+                    <div class="project-1-img" data-aos="zoom-in-right" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom"></div>
+                    <div class="project-1-tag">
+                        <h4>Name of Project 1</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="tool-logos">
+                            <i class="fa-brands fa-github"></i>
+                            <i class="fa-brands fa-html5"></i>
                         </div>
+                        <button>View Project</button>
                     </div>
-                    <div id="project2">
-                        <div class="project-2-img"> </div>
-                        <div class="project-2-tag">
-                            <h3>Name of Project 2</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div class="tool-logos">
-                                <i class="fa-brands fa-github"></i>
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-square-js"></i>
-                            </div>
-                            <button>View Project</button>
+                    <div class="project-2-img"  data-aos="zoom-in-left" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom"> </div>
+                    <div class="project-2-tag">
+                        <h4>Name of Project 2</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="tool-logos">
+                            <i class="fa-brands fa-github"></i>
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-square-js"></i>
                         </div>
+                        <button>View Project</button>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
-    <div id="sideLink">
-        <a href="#" target="_blank">Back to top</a>
-    </div>
+    <div id="backToTop" onclick="scrollUp()">Back to top</div>
     <footer>
-        &copy; <script type="text/JavaScript">document.write(new Date().getFullYear());</script> Zachari Moodie | <a href="#">Contact</a>
+        &copy; <script type="text/JavaScript">document.write(new Date().getFullYear());</script> Zachari Moodie | <a href="/contact.html">Contact Me</a>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/scripts.js"></script>
 </body>
 </html>
